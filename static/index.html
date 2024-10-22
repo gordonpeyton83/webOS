@@ -29,7 +29,7 @@
                             await connection.setTransport(transport, [{ wisp: wispserver }]);
                         } else {
                             console.log('Using Backend Wisp Server, if your static hosting just delete these lines bellow and uncomment out the text bellow')
-                            //let wispserver = "wss://tomp.app/wisp" Uncomment if static hosting
+                            let wispserver = "wss://tomp.app/wisp"
                             let wispserver = `${window.location.origin.replace(/^https?:\/\//, 'ws://')}/wisp/`
                             await connection.setTransport(transport, [{ wisp: wispserver }]);
                         }
